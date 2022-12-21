@@ -1,0 +1,46 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.color-wrapper {
+  @apply w-1/5 cursor-pointer h-40 flex items-end justify-end relative;
+
+  .copy-button {
+    @apply absolute border border-white px-3 py-2 text-white rounded-md top-1/2 left-1/2;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    .copy-button {
+      @apply block;
+    }
+  }
+}
+
+.message-container {
+  @apply w-full h-full z-50 fixed transition-opacity select-none;
+
+  div {
+    @apply top-1/2 left-1/2 h-40 opacity-30 relative bg-white leading-loose;
+
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    @apply top-1/2 left-1/2 absolute text-white;
+
+    text-shadow: 2px 2px gray;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+  }
+
+  span {
+    @apply text-white h-16 block absolute text-4xl;
+
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px gray;
+    top: 70%;
+    left: 50%;
+  }
+}
